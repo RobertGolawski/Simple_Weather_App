@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Weather App</h1>
+    <form
+      action="/weather"
+      method="get"
+    >
+      <label for="location">Enter a location:</label>
+      <input
+        type="text"
+        id="location"
+        name="location"
+        required
+      />
+      <input
+        type="submit"
+        value="Get Weather"
+      />
+    </form>
+  </body>
+</html>

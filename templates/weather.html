@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <title>Weather Results</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Weather in {{ location }}</h1>
+    <div class="weather-results">
+      <p>Temperature: {{ temperature }} C</p>
+      <p>Relative humidity: {{ relative_humidity }}%</p>
+      <p>Percipitation in the past hour: {{ precipitation }} mm</p>
+      <p>Chance of precipitation: {{percipitation_probability}} %</p>
+      <p>Sunrise: {{sunrise[-5:]}} local time</p>
+      <p>Sunset: {{sunset[-5:]}} local time</p>
+      <a href="{{ url_for('index') }}">Search again</a>
+    </div>
+  </body>
+</html>
